@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="robots" content="noindex,nofollow">
+<title>A股模拟盘 · 持仓看板</title>
+<style>
+  :root { --up:#d13b3b; --down:#1a9c52; --ink:#1c2430; --mut:#6b7684;
+          --line:#e6e9ef; --card:#fff; --bg:#f3f5f8; --warn:#b9770a; }
+  * { box-sizing:border-box; -webkit-text-size-adjust:100%; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+    font-size:16px; line-height:1.5; }
+  .wrap { max-width:640px; margin:0 auto; padding:14px 12px 40px; }
+  h1 { font-size:19px; margin:6px 2px 2px; }
+  .updated { color:var(--mut); font-size:13px; margin:0 2px 12px; }
+  .up { color:var(--up); } .down { color:var(--down); } .flat { color:var(--mut); }
+  .tiles { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px; }
+  .tile { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 14px; }
+  .tile.big { grid-column:1 / -1; }
+  .tile.warn { border-color:#f0d9a8; background:#fffaf0; }
+  .tl { color:var(--mut); font-size:13px; }
+  .tv { font-size:26px; font-weight:700; margin-top:2px; letter-spacing:-.5px; }
+  .tv.small { font-size:18px; }
+  .tile.big .tv { font-size:32px; }
+  .ts { font-size:13px; margin-top:2px; }
+  .sep { color:var(--mut); margin:0 6px; font-weight:400; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:14px; margin-bottom:12px; }
+  .card-h { font-weight:700; font-size:15px; margin-bottom:10px; }
+  .bench-row { display:flex; justify-content:space-between; align-items:center;
+    padding:6px 0; border-bottom:1px dashed var(--line); font-size:15px; }
+  .bench-row:last-of-type { border-bottom:none; }
+  .bench-row b { font-size:16px; }
+  .spark { margin-top:10px; }
+  .spark-empty { color:var(--mut); font-size:13px; padding:8px 0; }
+  .hint { color:var(--mut); font-size:12.5px; margin-top:8px; }
+  .empty { color:var(--mut); font-size:14px; padding:6px 2px; }
+  .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { padding:8px 6px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th { color:var(--mut); font-weight:600; font-size:12.5px; }
+  td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
+  td.name b { display:block; } .code { color:var(--mut); font-size:11.5px; margin-left:0; }
+  .name .code { display:block; }
+  .sub { font-size:11.5px; }
+  .lock { background:#eef1f6; color:var(--mut); font-size:10.5px; border-radius:4px;
+    padding:0 4px; margin-left:4px; }
+  .disclaimer { color:var(--mut); font-size:12px; line-height:1.6; margin-top:16px;
+    padding:12px; background:#eef1f6; border-radius:10px; }
+</style></head>
+<body><div class="wrap">
+  <h1>A股模拟盘 · 持仓看板</h1>
+  <p class="updated">更新时间 2026-07-13 09:27（北京时间） · 起始本金 ¥100,000.00</p>
+  
+      <div class="tiles">
+        <div class="tile big flat">
+          <div class="tl">总资产</div>
+          <div class="tv">¥100,000.00</div>
+          <div class="ts flat">累计 +0.00%（本金 ¥100,000.00）</div>
+        </div>
+        <div class="tile flat">
+          <div class="tl">今日盈亏</div>
+          <div class="tv">+0.00%</div>
+        </div>
+        <div class="tile">
+          <div class="tl">现金 / 持仓</div>
+          <div class="tv small">¥100,000.00<span class="sep">/</span>¥0.00</div>
+        </div>
+        <div class="tile ">
+          <div class="tl">风控状态</div>
+          <div class="tv small">✓ 正常</div>
+          <div class="ts">最大回撤 +0.00%</div>
+        </div>
+      </div>
+  
+      <div class="card">
+        <div class="card-h">业绩对比（成立以来）</div>
+        <div class="bench-row"><span>本模拟组合</span><b class="flat">+0.00%</b></div>
+        <div class="bench-row"><span>沪深300</span><b class="flat">—</b></div>
+        <div class="bench-row"><span>创业板指</span><b class="flat">—</b></div>
+        <div class="spark"><div class="spark-empty">（数据积累中，至少两个交易日后显示曲线）</div></div>
+        <div class="hint">目标：年化 ≥20%，跑赢沪深300与创业板指。红涨绿跌。</div>
+      </div>
+  
+          <div class="card"><div class="card-h">当前持仓</div>
+          <div class="empty">目前空仓 —— 100% 现金。等回调、不追高是常态，空仓也是一种决策。</div></div>
+  
+  
+  <div class="disclaimer">
+    ⚠ 这是<b>模拟盘（纸上交易）</b>，不涉及真实资金，仅用于学习与跟踪策略，<b>不构成投资建议</b>。
+    A股实行 T+1、涨跌停与印花税等规则，模拟盘已按真实规则撮合。投资有风险，入市需谨慎。
+  </div>
+</div></body></html>
