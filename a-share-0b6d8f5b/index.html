@@ -50,42 +50,63 @@
 </style></head>
 <body><div class="wrap">
   <h1>A股模拟盘 · 持仓看板</h1>
-  <p class="updated">更新时间 2026-07-15 16:36（北京时间） · 起始本金 ¥100,000.00</p>
+  <p class="updated">更新时间 2026-07-16 14:42（北京时间） · 起始本金 ¥100,000.00</p>
   
       <div class="tiles">
-        <div class="tile big flat">
+        <div class="tile big down">
           <div class="tl">总资产</div>
-          <div class="tv">¥100,000.00</div>
-          <div class="ts flat">累计 +0.00%（本金 ¥100,000.00）</div>
+          <div class="tv">¥99,997.91</div>
+          <div class="ts down">累计 -0.00%（本金 ¥100,000.00）</div>
         </div>
         <div class="tile flat">
           <div class="tl">今日盈亏</div>
-          <div class="tv">+0.00%</div>
+          <div class="tv">-0.00%</div>
         </div>
         <div class="tile">
           <div class="tl">现金 / 持仓</div>
-          <div class="tv small">¥100,000.00<span class="sep">/</span>¥0.00</div>
+          <div class="tv small">¥91,246.91<span class="sep">/</span>¥8,751.00</div>
         </div>
         <div class="tile ">
           <div class="tl">风控状态</div>
           <div class="tv small">✓ 正常</div>
-          <div class="ts">最大回撤 +0.00%</div>
+          <div class="ts">最大回撤 -0.00%</div>
         </div>
       </div>
   
       <div class="card">
         <div class="card-h">业绩对比（成立以来）</div>
-        <div class="bench-row"><span>本模拟组合</span><b class="flat">+0.00%</b></div>
-        <div class="bench-row"><span>沪深300</span><b class="up">+2.13%</b></div>
-        <div class="bench-row"><span>创业板指</span><b class="up">+2.49%</b></div>
-        <div class="spark"><svg viewBox="0 0 280 48" width="100%" height="48" preserveAspectRatio="none" role="img" aria-label="资产曲线"><polyline fill="none" stroke="#d13b3b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="2.0,46.0 48.0,46.0 94.0,46.0 140.0,46.0 186.0,46.0 232.0,46.0 278.0,46.0"/></svg></div>
+        <div class="bench-row"><span>本模拟组合</span><b class="down">-0.00%</b></div>
+        <div class="bench-row"><span>沪深300</span><b class="up">+0.06%</b></div>
+        <div class="bench-row"><span>创业板指</span><b class="down">-0.87%</b></div>
+        <div class="spark"><svg viewBox="0 0 280 48" width="100%" height="48" preserveAspectRatio="none" role="img" aria-label="资产曲线"><polyline fill="none" stroke="#1a9c52" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="2.0,2.0 29.6,2.0 57.2,2.0 84.8,2.0 112.4,2.0 140.0,2.0 167.6,2.0 195.2,2.0 222.8,2.0 250.4,2.0 278.0,46.0"/></svg></div>
         <div class="hint">目标：年化 ≥20%，跑赢沪深300与创业板指。红涨绿跌。</div>
       </div>
   
-          <div class="card"><div class="card-h">当前持仓</div>
-          <div class="empty">目前空仓 —— 100% 现金。等回调、不追高是常态，空仓也是一种决策。</div></div>
+          <div class="card">
+            <div class="card-h">当前持仓（1）</div>
+            <div class="table-wrap"><table>
+              <thead><tr><th>名称</th><th class="num">股数</th><th class="num">成本</th>
+                <th class="num">现价</th><th class="num">市值</th><th class="num">浮动盈亏</th></tr></thead>
+              <tbody>
+              <tr>
+                <td class="name"><b>紫金矿业</b><span class="code">601899</span></td>
+                <td class="num">300<span class="lock">锁300</span></td>
+                <td class="num">29.177</td>
+                <td class="num">29.17</td>
+                <td class="num">¥8,751.00</td>
+                <td class="num down">¥-2.10<br><span class="sub">-0.02%</span></td>
+              </tr></tbody>
+            </table></div>
+            <div class="hint">“锁N”=今日买入 N 股，T+1 明日才可卖。</div>
+          </div>
   
+          <div class="card"><div class="card-h">挂单 / 委托（1）</div>
+          <div class="table-wrap"><table><thead><tr><th>名称</th><th>方向</th>
+            <th class="num">股数</th><th>类型/价格</th></tr></thead><tbody><tr><td>紫金矿业<span class="code">601899</span></td><td class="down">卖出</td><td class="num">300</td><td>止损单 27.0</td></tr></tbody></table></div></div>
   
+          <div class="card"><div class="card-h">最近成交</div>
+          <div class="table-wrap"><table><thead><tr><th>时间</th><th>方向</th><th>名称</th>
+            <th class="num">成交</th><th class="num">已实现</th></tr></thead><tbody><tr><td>07-16 14:42</td><td class="up">买入</td><td>紫金矿业<span class="code">601899</span></td><td class="num">300@29.16</td><td class="num flat">—</td></tr></tbody></table></div></div>
   <div class="disclaimer">
     ⚠ 这是<b>模拟盘（纸上交易）</b>，不涉及真实资金，仅用于学习与跟踪策略，<b>不构成投资建议</b>。
     A股实行 T+1、涨跌停与印花税等规则，模拟盘已按真实规则撮合。投资有风险，入市需谨慎。
